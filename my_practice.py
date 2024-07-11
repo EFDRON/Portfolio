@@ -5,8 +5,8 @@ import time
 from streamlit_option_menu import option_menu
 import os
 
-#api_key=st.secrets["GOOGLE_API_KEY"]
-genai.configure(api_key="AIzaSyDXKDsRRF_fMkPZaRgl1Adhe7FoYcf9-tk")
+api_key=st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 response = model.generate_content("who are you")
