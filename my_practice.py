@@ -47,7 +47,7 @@ def main():
             st.title("I am Murtaza Hassan ")
         
         with col2:
-            st.image("images/murtaza.png")
+            st.image("images/cv.jpeg")
         
         st.write("")  # Add a single line of space
         st.write("")  # Add a single line of space
