@@ -9,8 +9,8 @@ api_key=st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
 
 model = genai.GenerativeModel('gemini-1.5-flash')
-response = model.generate_content("who are you")
-print(response.text)
+
+
 def text_generator(text):
     # response = "Sanadek is a user-friendly geospatial data platform designed to make complex data accessible and actionable. Through interactive maps, charts, and graphs, users can explore datasets with ease, uncovering trends and patterns that drive informed decision-making."
     for word in text.split():
@@ -33,7 +33,7 @@ def main():
     if "status" not in st.session_state:
         st.session_state.status="Home"
 
-    selected = option_menu(menu_title=None,
+    selected = option_menu(menu_title="menu,
                            options=["Home", "Projects", "Ask AI","VR Mode"],
                            icons=["house", "book", "robot","headset-vr"],
                            orientation="horizontal"
@@ -55,27 +55,8 @@ def main():
         
         st.session_state.status="Home"
     elif selected=="Datas":
-        i=1
-
-        st.session_state.status="Datas"
-        datas=["","People of Determination","Public Associations","Marriage Grants","Mass Weddings","Social Security","Relief","Financial Markets","Insurance","Business Registration","Money and Banking","Labor Force","National Accounts","Prices and Indices","Foreign Investment","Financial Market","Custom Duty","Pension","Metal Industries","Tourism","International Trade","Money and Banking","Prices and Indices","Foreign Investement"]
-        data_type=st.selectbox("Select Type of Data",datas)
-        if data_type=="":
-            st.write("Choose data to start")
-
-        else:
-            if data_type=="People of Determination":
-
-                st.write_stream(text_generator("### People of Determination Data"))
-                st.caption("Source: Ministry Of Community Development")
-
-
-            elif data_type=="Public Associations":
-                st.subheader("Public Associations Data")
-                st.caption("Source: Ministry Of Community Development")
-
-
-
+        pass
+        
 
     elif selected=="Ask AI":
         persona = """ You are Murtaza AI bot. You help people answer questions about your self (i.e Murtaza) Answer as if you are responding . dont answer in second or third person.
