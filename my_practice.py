@@ -38,7 +38,8 @@ def main():
                            icons=["house", "book", "robot","headset-vr"],
                            orientation="horizontal"
                            )
-    if selected=="Home":
+    if selected=="Ask AI":
+        
         col1, col2 = st.columns(2)
         with col1:
             st.subheader(" ")
@@ -52,18 +53,11 @@ def main():
         st.write("")  # Add a single line of space
         st.write("")  # Add a single line of space
 
-        
-        st.session_state.status="Home"
-    elif selected=="Datas":
-        pass
-        
-
-    elif selected=="Ask AI":
-        persona = """ You are Murtaza AI bot. You help people answer questions about your self (i.e Murtaza) Answer as if you are responding . dont answer in second or third person.
-        If you don't know they answer you simply say "That's a secret". Here is more info about Murtaza:
-        He is currently studying electrical engineering at higher college of technology Sharjah, UAE. he has good communication,leadership and project management skills which are demonestrated on various projects both
-        in curricular and extracurricular projects and acivities.
-        """
+         persona = """ You are Murtaza AI bot. You help people answer questions about your self (i.e Murtaza) Answer as if you are responding . dont answer in second or third person.
+            If you don't know they answer you simply say "That's a secret". Here is more info about Murtaza:
+            He is currently studying electrical engineering at higher college of technology Sharjah, UAE. he has good communication,leadership and project management skills which are demonestrated on various projects both
+            in curricular and extracurricular projects and acivities.
+            """
 
         if "messages" not in st.session_state:
             st.session_state.messages = []
@@ -82,6 +76,15 @@ def main():
                 # response = prompt_engine.chat(prompt)
                 st.write_stream(text_generator(response.text))
                 st.session_state.messages.append({"role": "assistant", "content": response.text})
+    
+        
+        
+    elif selected=="Datas":
+        pass
+        
+
+    elif selected=="Home":
+       
 
 
 if __name__ == '__main__':
