@@ -39,44 +39,20 @@ def main():
                            orientation="horizontal"
                            )
     if selected=="Home":
-        i=0
-        t1,t2=st.columns([1,8])
-        t1.image("images/cv.jpeg")
-        t2.write_stream(text_generator("## Welcome to Sanadek Geospatial Data Platform!"))
+        col1, col2 = st.columns(2)
+        with col1:
+            st.subheader(" ")
+            st.subheader(" ")
+            st.subheader("Hi :wave:")
+            st.title("I am Murtaza Hassan ")
+        
+        with col2:
+            st.image("images/murtaza.png")
+        
+        st.write("")  # Add a single line of space
+        st.write("")  # Add a single line of space
 
-        #image=open("C:/Users/efake/Downloads/_65a22b0b-8e1e-46c0-87e9-9878ea7e0080.jpeg")
-        st.write("### Unlock the Power of Data Visualization for Community Development")
-        col1,col2,col3=st.columns([1,5,1])
-        #col2.image("C:/Users/efake/Downloads/_65a22b0b-8e1e-46c0-87e9-9878ea7e0080.jpeg",width=600)
-
-        st.write("**At Sanadek, we believe that data should be more than just numbers on a page. Our platform transforms raw data into dynamic visualizations, empowering users to gain valuable insights and drive positive change in their communities.**")
-        st.subheader("What is Sanadek?")
-        s1,s2,s3=st.columns((1,5,3))
-        #s2.image("C:/Users/efake/Downloads/_453197d0-21b5-4fd7-9319-e2bcd9c793a1.jpeg",width=600)
-
-        with s3:
-            ("  "
-             ""
-             "")
-            #st.image("data/images/quotation_marko-removebg-preview.png",width=100)
-            st.write_stream(text_generator("Sanadek is a user-friendly geospatial data platform designed to make complex data accessible and actionable. Through interactive maps, charts, and graphs, users can explore datasets with ease, uncovering trends and patterns that drive informed decision-making."))
-            st.write_stream(text_generator("In essence, Sanadek is more than just a data platform—it's a gateway to actionable insights and informed decision-making. By democratizing access to geospatial data and empowering users with intuitive tools, Sanadek is driving positive change and transformation in diverse domains, ultimately contributing to a more sustainable and prosperous future."))
-            #st.write("Sanadek is a user-friendly geospatial data platform designed to make complex data accessible and actionable. Through interactive maps, charts, and graphs, users can explore datasets with ease, uncovering trends and patterns that drive informed decision-making.")
-
-        st.subheader("How to Use Sanadek:")
-        st.write("**1. Explore Data:** Dive into our extensive database of community development data. Search by location, topic, or dataset to find the information you need." )
-        st.image("C:/Users/efake/Pictures/Screenshots/Screenshot 2024-04-14 195216.png")
-        st.write("**2. Visualize Insights:** Engage with your data like never before. Our intuitive visualization tools bring your data to life, making it easy to spot trends, identify opportunities, and track progress over time.")
-        C1,C2,C3=st.columns([1,4,1])
-        #with C2:
-            #st.image("C:/Users/efake/Downloads/_f002fb34-54cb-42f6-a6cf-d9043c01174f.jpeg",width=400)
-        st.write("**3. Interact Dynamically:** Take control of your analysis with interactive features. Zoom in, filter, and customize visualizations to focus on what matters most to you.")
-        st.write("**4. Gain Insights with AI:** Ask questions and receive instant insights with our AI-powered analytics. From simple queries to complex analyses, our platform provides the answers you need, when you need them.")
-        st.subheader("Ready to Get Started?")
-        st.write("Join the Sanadek community today and unlock the full potential of your data for community development. Sign up for a free account or explore our demo to see Sanadek in action.")
-        st.subheader("About Us")
-        st.text("Developed by Team Sanadek")
-        st.text("UAE Hackathon 2024")
+        
         st.session_state.status="Home"
     elif selected=="Datas":
         i=1
