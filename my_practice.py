@@ -34,7 +34,7 @@ def main():
         st.session_state.status="Home"
 
     selected = option_menu(menu_title="menu,
-                           options=["Home", "Projects", "Ask AI","VR Mode"],
+                           options=["Ask AI", "Projects", "Home","VR Mode"],
                            icons=["house", "book", "robot","headset-vr"],
                            orientation="horizontal"
                            )
